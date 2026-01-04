@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ParaBank Onboarding Assist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell" aria-label="ParaBank Onboarding Assist landing page">
+    <header class="brand">
+      <div class="brand-badge" aria-hidden="true">
+        <img src="./assets/parabank-logo.png" alt="" />
+      </div>
+      <div class="brand-text">
+        <h1 class="title">ParaBank Onboarding Assist</h1>
+        <p class="subtitle">
+          You’re just a few clicks away from completing registration.
+          If needed, you can share your screen anytime using the floating button in the lower-right corner.
+        </p>
+      </div>
+    </header>
+
+    <section class="actions" aria-label="Actions">
+      <button id="startBtn" class="btn primary" type="button">
+        <span>Start registration</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+
+      <button id="helpBtn" class="btn ghost" type="button">
+        <span>How to share my screen</span>
+      </button>
+
+      <div class="note">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>Tip:</strong> You can toggle dark mode using the 🌙 button.</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Simple. Secure. Assisted onboarding.</span>
+    </footer>
+  </main>
+
+  <button id="darkToggle" class="fab" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+    🌙
+  </button>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card" role="document">
+      <div class="modal-header">
+        <h2>Share screen (if needed)</h2>
+        <button id="closeModal" class="icon-btn" aria-label="Close">✕</button>
+      </div>
+      <p class="modal-body">
+        During the session, use the <strong>floating screen-share button</strong> in the <strong>lower-right corner</strong>.
+        It will prompt you to choose what to share (tab, window, or entire screen).
+      </p>
+      <div class="modal-actions">
+        <button id="okModal" class="btn primary" type="button">Got it</button>
+      </div>
+      <p class="modal-foot">
+        Note: Screen-share must be initiated by the participant via the browser prompt (security requirement).
+      </p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
